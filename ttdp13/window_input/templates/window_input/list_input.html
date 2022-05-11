@@ -1,0 +1,11 @@
+{% extends 'window_input/base.html' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<ul>
+    {% for text in text_input %}
+    <p>input - {{ text.text_input }}</p>
+    <hr>
+    {% endfor %}
+</ul>
+{% endblock content %}

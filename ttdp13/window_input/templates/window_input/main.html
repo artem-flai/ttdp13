@@ -1,0 +1,14 @@
+{% extends 'window_input/base.html' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<form action="{% url 'win_inp' %}" method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {% for f in form %}
+    <p>input: {{ f }}</p>
+    {% endfor %}
+
+    <button type="submit">Save</button>
+</form>
+{% endblock content %}
